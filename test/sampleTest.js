@@ -85,17 +85,22 @@ describe('custom api without axios', () => {
 })
 
 describe('custom api with axios',()=>{
-    it('get request', (done) => {
-        axios.get('http://localhost:3000/getUsers').then(res => {
-            assert(res.status ===200, true)
-            done()
-        }).catch(err=>{
-            // done()
-            console.log(err)
-        })
-    })
+    // it('get request', (done) => {
+    //     axios.get('http://localhost:3000/getUsers').then(res => {
+    //         assert(res.status ===200, true)
+    //         done()
+    //     }).catch(err=>{
+    //         // done()
+    //         console.log(err)
+    //     })
+    // })
 
     it('post request', (done) => {
+
+        // with async await you have to remove done and put async in method
+        // let result = await axios.post('http://localhost:3000/postUsers', {user: "HI"})
+        // assert(result.data.result , 'HI')
+
         axios.post('http://localhost:3000/postUsers', {user: "HI"}).then(res => {
             assert(res.status === 200,true)
             done()

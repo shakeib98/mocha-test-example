@@ -85,15 +85,15 @@ describe('custom api without axios', () => {
 })
 
 describe('custom api with axios',()=>{
-    // it('get request', (done) => {
-    //     axios.get('http://localhost:3000/getUsers').then(res => {
-    //         assert(res.status ===200, true)
-    //         done()
-    //     }).catch(err=>{
-    //         // done()
-    //         console.log(err)
-    //     })
-    // })
+    it('get request', (done) => {
+        axios.get('http://localhost:3000/getUsers').then(res => {
+            assert(res.status ===200, true)
+            done()
+        }).catch(err=>{
+            // done()
+            console.log(err)
+        })
+    })
 
     it('post request', (done) => {
 
